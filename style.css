@@ -1,13 +1,11 @@
-
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
 
 /*
 	Introspect by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
-
-@import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
 
 /* Reset */
 
@@ -2379,45 +2377,145 @@
 			}
 
 /* List */
-ol {
-  list-style: decimal;
-  margin: 0 0 2rem 0;
-  padding-left: 1.25rem; }
-  ol li {
-    padding-left: 0.25rem; }
 
-ul {
-  list-style: disc;
-  margin: 0 0 2rem 0;
-  padding-left: 1rem; }
-  ul li {
-    padding-left: 0.325rem; }
-  ul.plain {
-    list-style: none;
-    padding-left: 0; }
-    ul.plain li {
-      margin-bottom: 1rem; }
-      ul.plain li .icon {
-        border-radius: 4px;
-        color: #ffffff;
-        display: inline-block;
-        margin-right: 1rem;
-        text-align: center;
-        width: 2rem;
-        height: 2rem;
-        line-height: 2rem;
-        background: rgba(0, 0, 0, 0.5); }
-  ul.alt {
-    list-style: none;
-    padding-left: 0; }
-    ul.alt li {
-      border-top: solid 1px;
-      padding: 0.75rem 0; }
-      ul.alt li:first-child {
-        border-top: 0;
-        padding-top: 0; }
-      ul.alt li:last-child {
-        padding-bottom: 0; }
+	ol {
+		list-style: decimal;
+		margin: 0 0 2em 0;
+		padding-left: 1.25em;
+	}
+
+		ol li {
+			padding-left: 0.25em;
+		}
+
+	ul {
+		list-style: disc;
+		margin: 0 0 2em 0;
+		padding-left: 1em;
+	}
+
+		ul li {
+			padding-left: 0.5em;
+		}
+
+		ul.alt {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.alt li {
+				border-top: solid 1px;
+				padding: 0.5em 0;
+			}
+
+				ul.alt li:first-child {
+					border-top: 0;
+					padding-top: 0;
+				}
+
+		ul.icons {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.icons li {
+				display: inline-block;
+				padding: 0 1em 0 0;
+			}
+
+				ul.icons li:last-child {
+					padding-right: 0;
+				}
+
+				ul.icons li .icon:before {
+					font-size: 2em;
+				}
+
+		ul.actions {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.actions li {
+				display: inline-block;
+				padding: 0 1em 0 0;
+				vertical-align: middle;
+			}
+
+				ul.actions li:last-child {
+					padding-right: 0;
+				}
+
+			ul.actions.small li {
+				padding: 0 0.5em 0 0;
+			}
+
+			ul.actions.vertical li {
+				display: block;
+				padding: 1em 0 0 0;
+			}
+
+				ul.actions.vertical li:first-child {
+					padding-top: 0;
+				}
+
+				ul.actions.vertical li > * {
+					margin-bottom: 0;
+				}
+
+			ul.actions.vertical.small li {
+				padding: 0.5em 0 0 0;
+			}
+
+				ul.actions.vertical.small li:first-child {
+					padding-top: 0;
+				}
+
+			ul.actions.fit {
+				display: table;
+				margin-left: -1em;
+				padding: 0;
+				table-layout: fixed;
+				width: calc(100% + 1em);
+			}
+
+				ul.actions.fit li {
+					display: table-cell;
+					padding: 0 0 0 1em;
+				}
+
+					ul.actions.fit li > * {
+						margin-bottom: 0;
+					}
+
+				ul.actions.fit.small {
+					margin-left: -0.5em;
+					width: calc(100% + 0.5em);
+				}
+
+					ul.actions.fit.small li {
+						padding: 0 0 0 0.5em;
+					}
+
+	dl {
+		margin: 0 0 2em 0;
+	}
+
+		dl dt {
+			display: block;
+			font-weight: 700;
+			margin: 0 0 1em 0;
+		}
+
+		dl dd {
+			margin-left: 2em;
+		}
+
+	ul.alt li {
+		border-top-color: #e5474b;
+	}
 
 /* Section/Article */
 
@@ -3090,27 +3188,42 @@ ul {
 
 /* Menu */
 
-	#nav {
-		display: none;
-	}
 	#nav > ul {
-       margin: 0;
+		margin: 0;
 	}
-	#nav > ul > li {
-      border-radius: 10px 10px 0 0;
-      display: inline-block;
-      margin-left: 0.5em;
-      padding: 0.5em 1.5em;
-}
 
+		#nav > ul > li {
+			border-radius: 10px 10px 0 0;
+			display: inline-block;
+			margin-left: 0.5em;
+			padding: 0.5em 1.5em;
+		}
 
-		@media screen and (max-width: 980px) {
-
-			#nav {
-				display: none;
+			#nav > ul > li a {
+				color: #FFF;
+				text-decoration: none;
+				font-size: 0.85em;
 			}
 
-		}
+			#nav > ul > li.first-child {
+				margin-left: 0;
+			}
+
+			#nav > ul > li.hover a {
+				color: #fff;
+			}
+
+			#nav > ul > li.active {
+				background: #3ac984;
+			}
+
+				#nav > ul > li.active a {
+					color: white;
+				}
+
+			#nav > ul > li > ul {
+				display: none;
+			}
 
 	.navPanelToggle {
 		position: fixed;
@@ -3277,7 +3390,7 @@ ul {
 		color: #f2a3a5;
 		padding: 13em 0 11em 0;
 		background-color: #0c0c0c;
-		background-image: url("../images/banner.jpg");
+		background-image: url("../../images/banner.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 15% left;

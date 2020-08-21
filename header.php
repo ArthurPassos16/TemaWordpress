@@ -9,28 +9,40 @@
 		<title><?php bloginfo('name').wp_title('|') ?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="styles.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="style.css" />
+			<link rel="stylesheet" href="font-awesome.min.css" />
+		</noscript>
 		<?php wp_head();?>
 	</head>
 	<body>
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="<?php echo home_url(); ?>" class="logo"><?php bloginfo('name');?></a>
-					<?php 
-						$args = array(                         
-							'theme_location'  => 'primary',           
-							'menu_class'      => 'menu_class',
-							'container_class' => 'container_class',
-							'menu'            => '',
-							'container'       => 'nav',
-							'container_class' => '',
-							'container_id'    => 'nav',
-							'menu_class'      => '',
-							'menu_id'         => 'nav'
-						);
-					?>
-					<?php wp_nav_menu( $args ); ?>
+
+					<!-- Logo -->
+						<a href="<?php echo home_url();?>" class="logo"><?php bloginfo('name'); ?></a>
+					
+					<!-- Nav -->						
+					<?php
+								$args = array(
+								'theme_location'  => 'primary',
+								'menu_class'      => 'menu_class',
+								'container_class' => 'container_class',
+								'menu'            => '',
+        						'container'       => 'nav',
+        						'container_class' => '',
+        						'container_id'    => 'nav',
+        						'menu_class'      => '',
+        						'menu_id'         => 'nav'
+							);?>
+							<?php wp_nav_menu( $args ); ?>
+							
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 				</div>
 			</header>
