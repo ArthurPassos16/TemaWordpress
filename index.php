@@ -4,13 +4,30 @@
 		<section id="main" >
 			<div class="inner">
 				<header class="major special">
-					<h1>Generic</h1>
+					<h2><?php wp_title(''); ?></h2>
 					<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
 				</header>
-				<a href="#" class="image fit"><img src="<?php echo(get_template_directory_uri()."/images/pic11.jpg") ?>" alt="" /></a>
-				<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet blandit adipiscing arcu ante.</p>
-				<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
-				<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan.</p>
+
+				<?php 
+					if (have_posts()): 
+						while (have_posts()) :  the_post(); ?>
+							<h3><?php the_title(); ?></h3>
+							<a href="#" class="image fit"><img src="<?php echo(get_template_directory_uri()."/images/pic11.jpg") ?>" alt="" /></a>
+							<?php 
+                                $content = get_the_excerpt();
+                                $resumo = substr($content, 0, 450);
+                                echo '<p>'.$resumo.'</p>';
+
+                            ?>
+                            <a href="<?php the_permalink();?>" class="button">Saiba mais</a>
+                            <br><?php
+
+                    	endwhile;
+
+                    else :
+                        echo '<p> No content found</p>';
+
+                    endif;  ?>
 			</div>
 		</section>
 
