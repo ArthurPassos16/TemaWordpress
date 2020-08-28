@@ -24,8 +24,12 @@
 					<div class="copyright">
 						&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
 					</div>
+					<div class="copyright">
+						&copy; Ícones feitos por <a href="https://www.flaticon.com/br/autores/google">Google</a> from <a href="https://www.flaticon.com/br/">www.flaticon.com</a>
+					</div>
 				</div>
 			</section>
+			<!-- <a href="https://www.flaticon.com/br/autores/google" title="Google">Google</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a>-->
 			<?php wp_footer();?>
 
 	</body>

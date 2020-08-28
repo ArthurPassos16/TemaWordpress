@@ -1,5 +1,5 @@
 <?php get_header();?>
-
+ 
 	<!-- Banner -->
 		<section id="banner">
 			<div class="inner">
@@ -56,7 +56,9 @@
 			<div class="inner">
 				<article>
 					<div class="content">
-						<span class="icon fa-laptop"></span>
+						<span class="icon">
+							<img src="<?php echo(get_template_directory_uri()."/img/icon3.png")?> " alt="" />
+						</span>
 						<header>
 							<h3>Tempus Feugiat</h3>
 						</header>
@@ -68,7 +70,9 @@
 				</article>
 				<article>
 					<div class="content">
-						<span class="icon fa-diamond"></span>
+						<span class="icon">
+							<img src="<?php echo(get_template_directory_uri()."/img/icon3.png")?> " alt="" />
+						</span>
 						<header>
 							<h3>Aliquam Nulla</h3>
 						</header>
@@ -80,7 +84,9 @@
 				</article>
 				<article>
 				<div class="content">
-						<span class="icon fa-laptop"></span>
+						<span class="icon">
+							<img src="<?php echo(get_template_directory_uri()."/img/icon3.png")?> " alt="" />
+						</span>
 						<header>
 							<h3>Sed Magna</h3>
 						</header>

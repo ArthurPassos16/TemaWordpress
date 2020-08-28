@@ -41,8 +41,6 @@
         						'menu_id'         => 'nav'
 							);?>
 							<?php wp_nav_menu( $args ); ?>
-							
-			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 				</div>
 			</header>
